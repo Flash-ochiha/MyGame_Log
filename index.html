@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s;
+        }
+        .cubes {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+            animation: move 5s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cubes"></div>
+    <h1>السلام عليكم ، هذا موقعي الخاص . هو نسخة أولية و شكرا على تفهمكم</h1>
+    <script>
+        let colors = ['white', 'yellow', 'dark'];
+        let index = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        }, 3000);
+    </script>
+</body>
+</html>
